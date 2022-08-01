@@ -1,20 +1,18 @@
-//create a function called getComputerChoice 
-//that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’
+//Randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 3);
     return ['Rock', 'Paper', 'Scissors'][randomNumber];
 }
 
-//Write a function that plays a single round of Rock Paper Scissors. 
-//The function should take two parameters - the playerSelection and computerSelection - 
-//and then return a string that declares the winner of the round 
-//like so: "You Lose! Paper beats Rock"
-//create a function called playRound that will play a single round of Rock Paper Scissors
-// make function’s playerSelection parameter case-insensitive 
-//(so users can input rock, ROCK, RocK or any other variation
+//Plays a single round of Rock Paper Scissors. 
+//Takes two parameters - the playerSelection and computerSelection - 
+//Returns a string that declares the winner of the round 
+//Users can input rock, ROCK, RocK or any other variation
 function playRound(playerSelection, computerSelection) {
+    
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
+
     if (playerSelection === computerSelection) {
         return "It's a tie!";
     } else if (playerSelection === 'rock') {
@@ -38,10 +36,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-
-//play a game of Rock Paper Scissors with the user
-//create a function called playGame that will play a game of Rock Paper Scissors
-//plays 5 rounds of Rock Paper Scissors
+//Plays a game of 5 rounds of  Rock Paper Scissors with the user
 function game() {
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt("Rock, Paper, or Scissors?");
@@ -49,5 +44,6 @@ function game() {
         console.log(playRound(playerSelection, computerSelection));
     }
 }
+
 //call the function playGame
 game();
