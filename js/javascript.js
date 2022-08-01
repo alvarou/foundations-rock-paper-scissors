@@ -41,6 +41,18 @@ function playRound(playerSelection, computerSelection) {
    // console.log(result);
     document.getElementById("result").textContent = result;
 
+    //get player and computer score and convert to integers
+    let playerScore = parseInt(document.getElementById("playerScore").textContent);
+    let computerScore = parseInt(document.getElementById("computerScore").textContent);    
+
+    //if result contains "Win" or "Lose" return result
+    if (result.includes("Win")) {
+        document.getElementById("playerScore").textContent = ++playerScore;
+    }
+    if (result.includes("Lose")) {
+        document.getElementById("computerScore").textContent = ++computerScore;
+    }
+    
 }
 
 //Plays a game of 5 rounds of  Rock Paper Scissors with the user
