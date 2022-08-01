@@ -39,7 +39,8 @@ function playRound(playerSelection, computerSelection) {
     }
 
    // console.log(result);
-    return result;
+    document.getElementById("result").textContent = result;
+
 }
 
 //Plays a game of 5 rounds of  Rock Paper Scissors with the user
