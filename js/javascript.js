@@ -52,6 +52,13 @@ function playRound(playerSelection, computerSelection) {
     if (result.includes("Lose")) {
         document.getElementById("computerScore").textContent = ++computerScore;
     }
+
+    //if player or computer score is 5, return winner
+    if (playerScore === 5) {
+        document.getElementById("winner").textContent = "You Win!";
+    }   if (computerScore === 5) {
+        document.getElementById("winner").textContent = "You Lose!";
+    }
     
 }
 
