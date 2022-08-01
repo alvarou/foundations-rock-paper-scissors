@@ -62,14 +62,3 @@ function playRound(playerSelection, computerSelection) {
     
 }
 
-//Plays a game of 5 rounds of  Rock Paper Scissors with the user
-function game() {
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("Rock, Paper, or Scissors?");
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-    }
-}
-
-//call the function playGame
-//game();
