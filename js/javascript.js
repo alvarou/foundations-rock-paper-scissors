@@ -13,27 +13,33 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
 
+    //initialize result variable
+    let result = "";
+
     if (playerSelection === computerSelection) {
-        return "It's a tie!";
+        result = "It's a tie!";
     } else if (playerSelection === 'rock') {
         if (computerSelection === 'paper') {
-            return "You Lose! Paper beats Rock";
+            result = "You Lose! Paper beats Rock";
         } else {
-            return "You Win! Rock beats Scissors";
+            result = "You Win! Rock beats Scissors";
         }
     } else if (playerSelection === 'paper') {
         if (computerSelection === 'scissors') {
-            return "You Lose! Scissors beats Paper";
+            result = "You Lose! Scissors beats Paper";
         } else {
-            return "You Win! Paper beats Rock";
+            result = "You Win! Paper beats Rock";
         }
     } else if (playerSelection === 'scissors') {
         if (computerSelection === 'rock') {
-            return "You Lose! Rock beats Scissors";
+            result = "You Lose! Rock beats Scissors";
         } else {
-            return "You Win! Scissors beats Paper";
+            result = "You Win! Scissors beats Paper";
         }
     }
+
+   // console.log(result);
+    return result;
 }
 
 //Plays a game of 5 rounds of  Rock Paper Scissors with the user
@@ -46,4 +52,4 @@ function game() {
 }
 
 //call the function playGame
-game();
+//game();

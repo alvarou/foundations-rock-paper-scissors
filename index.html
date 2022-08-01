@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/javascript.js"></script>
 </head>
 <body>
+    <h1>Rock-Paper-Scissors</h1>
+    <div class="selection">
+        <button id="btnRock" onclick="playRound('Rock',getComputerChoice())">Rock</button>
+        <button id="btnPaper" onclick="playRound('Paper',getComputerChoice())">Paper</button>
+        <button id="btnScissors" onclick="playRound('Scissors',getComputerChoice())">Scissors</button>
+    </div>
     
 </body>
 </html>

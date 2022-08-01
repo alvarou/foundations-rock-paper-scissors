@@ -1,0 +1,10 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+.selection {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
